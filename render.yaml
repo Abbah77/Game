@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: wildgrove-api
+    runtime: python
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: SUPABASE_URL
+        sync: false
+      - key: SUPABASE_ANON_KEY
+        sync: false
+      - key: NETLIFY_URL
+        sync: false
